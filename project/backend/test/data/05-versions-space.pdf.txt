@@ -1,0 +1,76 @@
+
+
+Kunal Chhablani
+Mumbai, India
+Ó
++91-8208153112
+ ̄
+LinkedIn
+R
+Mail
+
+MediumPortfolio Website
+EXPERIENCE
+Bridge Up - Software Engineer Intern
+W
+|Spring Boot, Core Java, JenkinsJuly 2024 - Present
+•
+Collaborated with the core development team to implement scalable backend solutions, contributing to a 20%
+increase in process efficiency and supporting the company’s expansion into 2 new business areas.
+Kavita Enterprises Software Engineer Intern
+W
+|Java, HTML, CSSJan - April 2024
+•
+Developed an ERP system that reduced process times by 30% and improved data accuracy by 25%, enhancing
+operational efficiency across multiple departments.
+•
+Ensured seamless integration with existing systems, resulting in improvement in data accuracy and reporting.
+PROJECTS
+Trading Application
+W
+|Spring Boot, Hibernate, Thymeleaf,J2EEMay 2024
+•
+Engineered a trading platform with Spring Boot, Hibernate, Thymeleaf, and Spring Boot Security, boosting
+execution speed and Security features
+•
+Develop a comprehensive admin dashboard for managing stocks, users, and system settings.
+•
+Enable users to create and manage their own stock portfolios.
+•
+Optimized platform reliability and user engagement by implementing advanced error handling, secure
+authentication mechanisms, and efficient content delivery, increasing user satisfaction.
+Invoice Processing Software
+W
+|Java- Spring Boot, Hibernate , MySQL ReactAug 2023
+•
+Led the development of an invoice processing software solution, resulting in reduction in processing time and
+optimizing workflows.
+•
+Ensured secure handling of financial data and facilitated seamless integration with external systems, enhancing
+operational efficiency and scalability.
+Blockchain based Banking System using Java
+W
+|Java, OOP, BlockChainJune 2021
+•
+Developed a secure blockchain-based banking system with real-time transaction verification.Managed data
+storage and retrieval efficiently using blockchain technology, ensuring transparency and immutability.
+•
+Implemented robust security measures to ensure data integrity and reliabile banking solution
+EDUCATION
+Thadomal Shahani Engineering College - Bachelor of Engineering2022 – 2025
+Computer Science (Major :  Artificial Intelligence and Data Science) -CGPA-9.01Mumbai, India
+Vivekanand Education Society Polytechnic - Diploma2019 – 2022
+Computer Engineering -Percentage-84%Mumbai, India
+TECHNICAL SKILLS
+Languages:Java (Proficient), C++, C, Python, PHP , JavaScript, SQL
+Technologies/Frameworks:Spring boot, Django, MongoDB, Express, React, NodeJS, Postgres
+Developer Tools:Git, GitHub, VS Code, PyCharm, IntelliJ, Canva, Figma
+Soft Skills:Leaderships, Creativity, Time Management, Analytical Skills, Written Communication
+CERTIFICATIONS
+Introduction to Spring Boot - Telusko
+EXTRACURRICULAR
+•
+Author of 100+ tech blogs covering a wide array of topics, from development tutorials to cutting-edge trends
+and innovations on Medium.
+•
+Participate in Regular Competitive Programming Contests.  Solved 300+ Probelms.  Utilized :  C++
