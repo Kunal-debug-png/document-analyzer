@@ -10,10 +10,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 
-
+// Initialize OpenAI client with NVIDIA API
 const openai = new OpenAI({
-  apiKey: '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',
-  baseURL: 'https://integrate.api.nvidia.com/v1/openai'
+  apiKey: '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',
+  baseURL: 'https://integrate.api.nvidia.com/v1', // Correct base URL
 });
 
 // Configure multer for file uploads
@@ -57,27 +57,43 @@ app.post('/api/analyze', upload.single('pdf'), async (req, res) => {
     const analysis = analyzeText(data.text, req.body.excludeStopWords === 'true');
 
     try {
-      // Get AI insights
-      const completion = await openai.chat.completions.create({
+      // Log the text being sent to the NVIDIA LLM
+      console.log('Sending text to NVIDIA LLM:', data.text.slice(0, 500));
+
+      // Log the full request payload
+      const requestPayload = {
         model: "nvidia/llama-3.1-nemotron-70b-instruct",
         messages: [{
           role: "user",
           content: `Analyze this text and provide key insights in 2-3 sentences: ${data.text.slice(0, 500)}...`
         }],
         temperature: 0.5,
-        max_tokens: 1024
-      });
+        top_p: 1,
+        max_tokens: 1024,
+        stream: true,
+      };
+      console.log('Request Payload:', JSON.stringify(requestPayload, null, 2));
+
+      // Get AI insights from NVIDIA LLM
+      const completion = await openai.chat.completions.create(requestPayload);
+
+      let aiInsights = '';
+      for await (const chunk of completion) {
+        aiInsights += chunk.choices[0]?.delta?.content || '';
+      }
+
+      // Log the NVIDIA LLM response
+      console.log('NVIDIA LLM Response:', aiInsights);
 
       res.json({
         ...analysis,
-        aiInsights: completion.choices[0]?.message?.content
+        aiInsights: aiInsights || 'No insights generated.'
       });
     } catch (aiError) {
-      // If AI analysis fails, return basic analysis without insights
-      console.error('', aiError);
+      console.error('AI Analysis failed:', aiError);
       res.json({
         ...analysis,
-        aiInsights: ''
+        aiInsights: 'AI insights could not be generated.'
       });
     }
   } catch (error) {
